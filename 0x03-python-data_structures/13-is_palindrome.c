@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * is_palindrome - function that checks if a singly linked list is palindrome
  * @head: double pointer to head
@@ -6,9 +7,9 @@
  */
 int is_palindrome(listint_t **head)
 {
-	if (*head == NULL || (*head)->next == NULL)
-		return (1);
-	return (chkpal(head, *head));
+        if (*head == NULL || (*head)->next == NULL)
+                return (1);
+        return (chkpal(head, *head));
 }
 
 /**
@@ -21,7 +22,7 @@ int chkpal(listint_t **head, listint_t *tail)
 {
 	if (tail == NULL)
 		return (1);
-	if (is_pal(head, tail->next) && (*head)->n == tail->n)
+	if (chkpal(head, tail->next) && (*head)->n == tail->n)
 	{
 		*head = (*head)->next;
 		return (1);

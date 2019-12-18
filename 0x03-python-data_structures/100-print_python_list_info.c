@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <Python.c>
 
 void print_python_list_info(PyObject *p)
 {
