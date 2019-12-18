@@ -6,13 +6,13 @@
  */
 int is_palindrome(listint_t **head)
 {
-        if (*head == NULL || (*head)->next == NULL)
-                return (1);
-        return(chkpal(head, *head));
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+	return (chkpal(head, *head));
 }
 
 /**
- * chkpal - function to recursively check values of head and tail in a linked list
+ * chkpal - function to recursively check values of head and tail
  * @head: double pointer to head
  * @tail: single pointer to tail
  * Return: 0 if it is not a palindrome, 1 if it is a palindrome
