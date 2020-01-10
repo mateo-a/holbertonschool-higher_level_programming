@@ -7,7 +7,7 @@ class Square:
     def __init__(self, size=0):
         """Initializes the data"""
         self.size = size
-    
+  
     @property
     def size(self):
         """to retrieve size"""
