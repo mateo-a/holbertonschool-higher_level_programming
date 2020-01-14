@@ -1,0 +1,57 @@
+The ``5-text_indentation`` module
+=================================
+
+Using ``text_indentation``
+-------------------
+
+Import ``text_indentation`` from the ``5-text_indentation`` module:
+
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Now use it:
+
+    >>> text="Van Rossum: was born and raised in the Netherlands? where he received a master's degree in mathematics. and computer science."
+    >>> text_indentation(text)
+    Van Rossum:
+    <BLANKLINE>
+    was born and raised in the Netherlands?
+    <BLANKLINE>
+    where he received a master's degree in mathematics.
+    <BLANKLINE>
+    and computer science.
+    <BLANKLINE>
+
+    >>> text = 5
+    >>> text_indentation(text)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text = "spider"
+    >>> text_indentation(text)
+    spider
+
+    >>> text = "Van.Rossum?: Who are you.?     Mr."
+    >>> text_indentation(text)
+    Van.
+    <BLANKLINE>
+    Rossum?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    Who are you.
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    Mr.
+    <BLANKLINE>
+
+    >>> text_indentation(".checking")
+    .
+    <BLANKLINE>
+    checking
+    
+    >>> text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
