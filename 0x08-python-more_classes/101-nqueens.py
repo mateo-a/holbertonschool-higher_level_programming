@@ -25,8 +25,8 @@ def chessboard(size):
             next_position = 0
             for y in range(queens):
                 queen_x = n_queens[y]
-                if (x == queen_x or x + queens == queen_x + y
-                        or x - queens == queen_x - y):
+                if (x == queen_x or x + queens == queen_x + y or
+                        x - queens == queen_x - y):
                     next_position = 1
                     break
             if next_position == 1:
