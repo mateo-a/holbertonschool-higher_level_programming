@@ -14,12 +14,8 @@ def add_integer(a, b=98):
     Returns:
         int: a + b casted to integer
     """
-    if isinstance(a, (int, float)):
-        ai = int(a)
-        if isinstance(b, (int, float)):
-            bi = int(b)
-            return int(a + b)
-        else:
-            raise TypeError("b must be an integer")
-    else:
+    if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
+    if not isinstance(b, int) and not isinstance(b, float):
+        raise TypeError("b must be an integer")
+    return int(a + b)
