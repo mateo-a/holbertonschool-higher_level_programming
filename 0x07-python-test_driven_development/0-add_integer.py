@@ -14,17 +14,16 @@ def add_integer(a, b=98):
     Returns:
         int: a + b casted to integer
     """
-    types = [int, float]
-    if type(a) not in types:
+    if not isinstance(a, int) and not isinstance(a, float):
         raise TypeError("a must be an integer")
-    if type(b) not in types:
+
+    if not isinstance(b, int) and not isinstance(b, float):
         raise TypeError("b must be an integer")
-    if type(a) is float('inf') or type(b) is float('inf'):
-        raise OverflowError("cannot convert float infinity to integer")
-    if type(a) is float('NaN') or type(b) is float('NaN'):
-        raise OverflowError("cannot convert float NaN to integer")
-    if type(a) is float:
+
+    if isinstance(a, float):
         a = int(a)
-    if type(b) is float:
+
+    if isinstance(b, float):
         b = int(b)
-    return a + b
+
+    return int(a + b)
