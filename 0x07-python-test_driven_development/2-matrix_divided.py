@@ -15,6 +15,10 @@ def matrix_divided(matrix, div):
         list: a new matrix
     """
     listMsj = "matrix must be a matrix (list of lists) of integers/floats"
+    if div == float('inf') or div == -float('inf'):
+        raise OverflowError("cannot convert float infinity to integer")
+    if div == float('NaN') or div != div:
+        raise ValueError("cannot convert float NaN to integer")
     if not isinstance(div, (int, float)) or div != div:
         raise TypeError("div must be a number")
     if div == 0:
@@ -33,5 +37,3 @@ def matrix_divided(matrix, div):
     if len(set([len(row) for row in matrix])) is not 1:
         raise TypeError("Each row of the matrix must have the same size")
     return [[round(x / div, 2) for x in row] for row in matrix]
-
-
