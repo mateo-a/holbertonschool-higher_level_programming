@@ -26,9 +26,14 @@ def add_integer(a, b=98):
     if isinstance(b, float):
         b = int(b)
 
+    if a != a:
+        raise ValueError
+    if b != b:
+        raise ValueError
+
     result = a + b
 
-    if result == float('inf') or result == -float('inf'):
+    if result == float("inf") or result == -float("inf"):
         raise OverflowError
 
     return (result)
