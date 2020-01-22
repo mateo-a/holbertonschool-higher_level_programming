@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import json
 """
 
 Function that returns an object (Python data structure)
