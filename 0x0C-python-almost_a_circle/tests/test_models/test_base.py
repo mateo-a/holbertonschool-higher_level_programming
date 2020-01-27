@@ -2,6 +2,7 @@
 
 
 import unittest
+from models import Base
 from models.base import Base
 Base = Base
 
