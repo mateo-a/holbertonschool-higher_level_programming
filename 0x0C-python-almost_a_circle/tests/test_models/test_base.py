@@ -7,11 +7,9 @@ Base = Base
 
 
 class TestBase(unittest.TestCase):
-
-    def test_doc(self):
-        self.assertTrue(len(Base.__doc__) > 0)
-
+    """Test cases for Base"""
     def test_id(self):
+        """Test id"""
         b1 = Base(12)
         self.assertEqual(b1.id, 12)
 
