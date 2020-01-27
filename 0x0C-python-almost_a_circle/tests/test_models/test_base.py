@@ -3,16 +3,20 @@
 
 import unittest
 from models.base import Base
-Base = Base
 
 
 class TestBase(unittest.TestCase):
     """Test cases for Base"""
+    def setUp(self):
+        """Setup for each test"""
+        Base._Base__nb_objects = 0
+
     def test_id(self):
         """Test id"""
-        b1 = Base(12)
-        self.assertEqual(b1.id, 12)
+        b = Base(7)
+        self.assertEqual(b.id, 7)
 
-
-if __name__ == '__main__':
-    unittest.main()
+    def no_test_id(self):
+        """No id received"""
+        b = Base()
+        self.assertEqual(1, b.id)
