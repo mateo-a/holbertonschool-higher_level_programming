@@ -1,20 +1,13 @@
 #!/usr/bin/python3
-
-
 import unittest
-from models.base import Base
-Base = Base
+import pep8
 
 
 class TestBase(unittest.TestCase):
-
-    def test_doc(self):
-        self.assertTrue(len(Base.__doc__) > 0)
-
-    def test_id(self):
-        b1 = Base(12)
-        self.assertEqual(b1.id, 12)
-
-
-if __name__ == '__main__':
-    unittest.main()
+    """Test clase"""
+    def test_pep8_conformance(self):
+        """Test that we conform to PEP8."""
+        pep8check = pep8.StyleGuide(quiet=True)
+        result = pep8check.check_files(['models/base.py', 'models/square.py', 'models/rectangle.py'])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
