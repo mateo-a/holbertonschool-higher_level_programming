@@ -2,7 +2,6 @@
 
 import unittest
 from models.base import Base
-from models import Square
 from models.square import Square
 Square = Square
 

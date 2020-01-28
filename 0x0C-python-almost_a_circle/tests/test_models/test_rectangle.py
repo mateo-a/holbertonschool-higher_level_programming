@@ -2,7 +2,6 @@
 
 import unittest
 from models.base import Base
-from models import Rectangle
 from models.rectangle import Rectangle
 Rectangle = Rectangle
 
