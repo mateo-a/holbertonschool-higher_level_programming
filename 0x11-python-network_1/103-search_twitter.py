@@ -13,8 +13,8 @@ if __name__ == "__main__":
     encoded = base64.b64encode(bytes("{}:{}".format(key, secret)
                                      .encode('utf-8')))
     header = {"Authorization": "Basic " + str(encoded, encoding='utf-8'),
-              "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"}
-
+              "Content-Type": "application/x-www-form-urlencoded;\
+charset=UTF-8"}
     req = requests.post("https://api.twitter.com/oauth2/token",
                         headers=header, data={"grant_type":
                                               "client_credentials"})
