@@ -1,16 +1,14 @@
 #!/usr/bin/node
 // adding a new function incr that increments the integer value
-const myObject = {
+let myObject = {
   type: 'object',
   value: 12
-}
-console.log(myObject)
-myObject.incr = function () {
-  this.value += 1
-}
-myObject.incr()
-console.log(myObject)
-myObject.incr()
-console.log(myObject)
-myObject.incr()
-console.log(myObject)
+};
+console.log(myObject);
+myObject.incr = function () { this.value += 1; };
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
