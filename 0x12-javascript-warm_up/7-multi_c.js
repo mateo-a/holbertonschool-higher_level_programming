@@ -1,8 +1,8 @@
 #!/usr/bin/node
 // script that prints x times “C is fun”
-const n = process.argv[2]
+const n = parseInt(process.argv[2]);
 
-if (!isNaN(parseInt(n))) {
+if (!isNaN(n)) {
   for (let i = 0; i < n; i++) {
     console.log('C is fun')
   }
