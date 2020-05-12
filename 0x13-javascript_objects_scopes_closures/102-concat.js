@@ -5,7 +5,7 @@ function readWrite (Origin, Dest) {
     if (err) {
       return console.log(err);
     }
-    fs.appendFile(Dest, data + '\n', 'utf8', function (err) {
+    fs.appendFile(Dest, data, 'utf8', function (err) {
       if (err) {
         return console.log(err);
       }
