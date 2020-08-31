@@ -44,4 +44,3 @@ try:
 except KeyboardInterrupt:
     printStatistics(statusCodes, fileSize)
     raise
-
