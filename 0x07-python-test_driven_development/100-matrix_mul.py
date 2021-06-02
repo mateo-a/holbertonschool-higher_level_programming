@@ -26,7 +26,7 @@ def check_args(matrix, name):
         raise ValueError("{} can't be empty".format(name))
 
     if max(rows_length) != min(rows_length):
-        raise TypeError("each row of {} must should be of the same size"
+        raise TypeError("each row of {} must be of the same size"
                         .format(name))
     return True
 
