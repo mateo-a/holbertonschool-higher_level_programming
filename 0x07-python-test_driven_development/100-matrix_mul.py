@@ -6,6 +6,11 @@ function that multiplies 2 matrices
 
 def check_args(matrix, name):
     """Check values"""
+    checkm = [len(i) for i in matrix]
+    if len(set(checkm)) != 1:
+        msg = "each row of m_a must be of the same size"
+        raise TypeError(msg)
+        
     if not isinstance(matrix, list):
         raise TypeError("{} must be a list".format(name))
     rows_length = []
