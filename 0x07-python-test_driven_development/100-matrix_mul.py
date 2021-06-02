@@ -18,7 +18,7 @@ def check_args(matrix, name):
         rows_length.append(len(row))
         for val in row:
             if not isinstance(val, (float, int)) or type(val) is bool:
-                raise TypeError("{} should contain only integers or floats"
+                raise TypeError("{} must should contain only integers or floats"
                                 .format(name))
 
     if len(rows_length) == 0 or max(rows_length) == 0:
