@@ -10,8 +10,8 @@ def check_args(matrix, name):
     """Check values"""
     if not isinstance(matrix, list):
         raise TypeError("{} must be a list".format(name))
-    if not all(isinstance(i, list) for i in matrix):
-        raise TypeError("{} must be a list of lists".format(name))
+    '''if not all(isinstance(i, list) for i in matrix):
+        raise TypeError("{} must be a list of lists".format(name))'''
     rows_length = []
     for row in matrix:
         if not isinstance(row, list):
