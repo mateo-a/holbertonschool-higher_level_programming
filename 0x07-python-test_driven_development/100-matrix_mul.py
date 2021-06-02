@@ -13,7 +13,7 @@ def check_args(matrix, name):
     rows_length = []
     for row in matrix:
         if not isinstance(row, list):
-            raise TypeError("{} must be a list".format(name))
+            raise TypeError("{} must be a list of lists".format(name))
         rows_length.append(len(row))
         for val in row:
             if not isinstance(val, (float, int)) or type(val) is bool:
